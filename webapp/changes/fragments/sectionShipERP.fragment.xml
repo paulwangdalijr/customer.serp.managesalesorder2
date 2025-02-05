@@ -1,0 +1,17 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition
+    xmlns:uxap="sap.uxap"
+    xmlns:core='sap.ui.core'
+    xmlns='sap.m'
+>
+    <uxap:ObjectPageSection
+        id="op-section-cae9cd41"
+        title="ShipERP"
+    >
+        <uxap:ObjectPageSubSection id="op-subsection-cae9cd41">
+            <!-- <HBox id="hbox-cae9cd41"> -->
+                <!--  add your xml here -->
+            <!-- </HBox> -->
+        </uxap:ObjectPageSubSection>
+    </uxap:ObjectPageSection>
+</core:FragmentDefinition>

@@ -1,0 +1,31 @@
+{
+  "changeType": "addXML",
+  "reference": "customer.serp.managesalesorder2",
+  "namespace": "apps/customer.serp.managesalesorder2/changes/",
+  "projectId": "customer.serp.managesalesorder2",
+  "packageName": "$TMP",
+  "moduleName": "customer/serp/managesalesorder2/changes/fragments/sectionShipERP.fragment.xml",
+  "support": {
+    "generator": "@sap-ux/control-property-editor",
+    "command": "addXML",
+    "sapui5Version": "1.132.1"
+  },
+  "originalLanguage": "EN",
+  "layer": "CUSTOMER_BASE",
+  "fileType": "change",
+  "fileName": "id_1738790574873_1251_addXML",
+  "content": {
+    "targetAggregation": "sections",
+    "index": 9,
+    "fragmentPath": "fragments/sectionShipERP.fragment.xml",
+    "templateName": "OBJECT_PAGE_CUSTOM_SECTION"
+  },
+  "texts": {},
+  "selector": {
+    "id": "cus.sd.salesorderv2.manage::SalesOrderManageObjectPage--fe::ObjectPage",
+    "idIsLocal": false
+  },
+  "dependentSelector": {},
+  "jsOnly": false,
+  "creation": "2025-02-05T21:23:04.666Z"
+}
