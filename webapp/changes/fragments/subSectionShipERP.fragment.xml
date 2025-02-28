@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" displayBlock="true">
     <!--  add your xml here -->
-<sap.ui.layout:VerticalLayout width="100%" xmlns:sap.ui.layout="sap.ui.layout" id="layout1">
+<sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout1">
     <sap.ui.layout:content>
         <sap.ui.layout.form:Form xmlns:sap.ui.layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0" width="100%">
             <sap.ui.layout.form:formContainers>
@@ -8,19 +8,47 @@
                     <sap.ui.layout.form:formElements>
                         <sap.ui.layout.form:FormElement label="Carrier" id="element0_1737069087363">
                             <sap.ui.layout.form:fields>
-                                <Input xmlns="sap.m" width="20%" id="shiperpCarrier" editable="false"/>
+                                <ComboBox xmlns="sap.m" id="shiperpCarrier" maxWidth="20%">
+                                    <items>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item2"/>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item3"/>
+                                        </items>
+                                    
+                                </ComboBox>
                                 
                             </sap.ui.layout.form:fields>
                             
                         </sap.ui.layout.form:FormElement>
-                        <sap.ui.layout.form:FormElement label="Shipping Condition" id="element0">
+                        <sap.ui.layout.form:FormElement label="Service" id="element0">
                             <sap.ui.layout.form:fields>
-                                <Input xmlns="sap.m" width="20%" id="shiperpCondition" editable="false"/>
+                                <ComboBox xmlns="sap.m" id="shiperpService" width="20%">
+                                    <items>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item8"/>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item9"/>
+                                        </items>
+                                    
+                                </ComboBox>
                                 
                             </sap.ui.layout.form:fields>
                             
+                        </sap.ui.layout.form:FormElement><sap.ui.layout.form:FormElement label="Payment" id="element0_1740175312310">
+                            <sap.ui.layout.form:fields>
+                                <ComboBox xmlns="sap.m" id="shiperpPayment" width="20%">
+                                    <items>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item6"/>
+                                        <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item7"/>
+                                        </items>
+                                    
+                                </ComboBox>
+                            </sap.ui.layout.form:fields>
                         </sap.ui.layout.form:FormElement>
                         </sap.ui.layout.form:formElements>
+                    
+                <sap.ui.layout.form:title>
+                    
+                    <core:Title text="General" id="titleGeneral"/>
+                    
+                </sap.ui.layout.form:title>
                     
                 </sap.ui.layout.form:FormContainer>
                 
@@ -30,41 +58,101 @@
                 
             </sap.ui.layout.form:layout>
             </sap.ui.layout.form:Form>
-        <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" noDataText="Calculating Shipsets..." id="tableShipset" sticky="ColumnHeaders">
-            <columns>
-                <Column id="column0_1738178994599">
-                    <header>
-                        <Label text="Shipping Point" id="label0_1738178994599"/>
-                        
-                    </header>
+        <Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0_1740608860212">
+            <headerToolbar>
+                <Toolbar id="toolbar1_1740608860212">
+                    <Title text="Shipset" id="titleShipset"/>
+                    <ToolbarSpacer xmlns:core="sap.ui.core" xmlns="sap.m" id="id2_copy"/>
+                    <content/>
+                    </Toolbar>
+                
+            </headerToolbar>
+            <content>
+                <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" noDataText="Calculating Shipsets..." id="tableShipset" sticky="ColumnHeaders">
+                    <columns>
+                        <Column id="column0_1738178994599_copy">
+                            <header>
+                                <Label text="Shipping Point" id="label0_1738178994599_copy"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        <Column id="column1_1738178994599_copy">
+                            <header>
+                                <Label text="Incoterm" id="label1_1738178994599_copy"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        <Column id="column2_1738178994600_copy">
+                            <header>
+                                <Label text="Customer" id="label2_1738178994600_copy"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        <Column id="column3_copy">
+                            <header>
+                                <Text text="Loading Date" id="text8_copy"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        </columns>
                     
-                </Column>
-                <Column id="column1_1738178994599">
-                    <header>
-                        <Label text="Incoterm" id="label1_1738178994599"/>
+                </Table>
+                </content>
+            </Panel>
+        <Panel xmlns:core="sap.ui.core" xmlns="sap.m" expandable="true" expanded="true" id="panel0">
+            <headerToolbar>
+                <Toolbar id="toolbar1">
+                    <Title text="Rates" id="id1"/>
+                    <ToolbarSpacer id="id2"/>
+                    <Button icon="sap-icon://settings" id="id3"/>
+                    </Toolbar>
+                
+            </headerToolbar>
+            <content>
+                <Button xmlns:core="sap.ui.core" xmlns="sap.m" text="Rate Quote" press=".extension.customer.serp.managesalesorder2.shiperp.onClickRateQuoteButton" id="button1"/>
+                <Table xmlns:core="sap.ui.core" xmlns="sap.m" noDataText="Drop column list items here and columns in the area above" id="table01">
+                    <items>
+                        <ColumnListItem type="Active" id="item11">
+                            <cells>
+                                <Text text="Row 1 Cell 1" id="text7"/>
+                                <Text text="Row 1 Cell 2" id="text8_1740607122926"/>
+                                <Text text="Row 1 Cell 3" id="text9"/>
+                                </cells>
+                            
+                        </ColumnListItem>
                         
-                    </header>
-                    
-                </Column>
-                <Column id="column2_1738178994600">
-                    <header>
-                        <Label text="Customer" id="label2_1738178994600"/>
-                        
-                    </header>
-                    
-                </Column>
-                <Column id="column3">
-                    <header>
-                        <Text text="Loading Date" id="text8"/>
-                        
-                    </header>
-                    
-                </Column>
-                </columns>
-            
-        </Table>
+                    </items>
+                    <columns>
+                        <Column id="column01">
+                            <header>
+                                <Label text="Header 1" id="label01"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        <Column id="column11">
+                            <header>
+                                <Label text="Header 2" id="label11"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        <Column id="column2">
+                            <header>
+                                <Label text="Header 3" id="label2"/>
+                                
+                            </header>
+                            
+                        </Column>
+                        </columns>
+                    </Table>
+                </content>
+            </Panel>
     </sap.ui.layout:content>
 </sap.ui.layout:VerticalLayout>
-
 
 </core:FragmentDefinition>

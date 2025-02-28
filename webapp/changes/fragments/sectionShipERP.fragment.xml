@@ -12,6 +12,6 @@
             <!-- <HBox id="hbox-cae9cd41"> -->
                 <!--  add your xml here -->
             <!-- </HBox> -->
-        </uxap:ObjectPageSubSection>
+        </uxap:ObjectPageSubSection> 
     </uxap:ObjectPageSection>
 </core:FragmentDefinition>
